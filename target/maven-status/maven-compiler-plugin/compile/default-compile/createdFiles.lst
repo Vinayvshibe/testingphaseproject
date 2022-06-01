@@ -1,0 +1,6 @@
+com\simplilearn\Application.class
+com\simplilearn\entity\Student.class
+com\simplilearn\service\StudentService.class
+com\simplilearn\controller\StudentController.class
+com\simplilearn\service\impl\StudentServiceImpl.class
+com\simplilearn\repo\StudentRepo.class
