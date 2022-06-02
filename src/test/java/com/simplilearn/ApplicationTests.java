@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 @SpringBootTest
 class ApplicationTests {
 
-	@Test
+	@Test (priority = 1)
 	void addStudent() {
 		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver2.exe");
 		WebDriver driver = new ChromeDriver();
@@ -38,7 +38,7 @@ class ApplicationTests {
 		driver.quit();
 	}
 
-	@Test
+	@Test (priority = 2)
 	void readStudent() {
 		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver2.exe");
 		WebDriver driver = new ChromeDriver();
@@ -55,7 +55,7 @@ class ApplicationTests {
 		driver.quit();
 	}
 
-	@Test
+	@Test (priority = 3)
 	void updateStudent() {
 		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver2.exe");
 		WebDriver driver = new ChromeDriver();
@@ -84,7 +84,7 @@ class ApplicationTests {
 		driver.quit();
 	}
 
-	@Test
+	@Test (priority = 4)
 	void removeStudent() {
 		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver2.exe");
 		WebDriver driver = new ChromeDriver();
@@ -93,7 +93,7 @@ class ApplicationTests {
 		driver.manage().window().maximize();
 		driver.findElement(By.className("btn-danger")).click();
 		sleep(1000);
-		driver.findElement(By.xpath("//input[@type='number' and @name='id']")).sendKeys("2");
+		driver.findElement(By.xpath("//input[@type='number' and @name='id']")).sendKeys("1");
 		sleep(1000);
 		driver.findElement(By.xpath("//input[@type='submit']")).click();
 		sleep(1000);
