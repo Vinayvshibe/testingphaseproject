@@ -54,7 +54,7 @@ steps {
 
 withCredentials([string(credentialsId: 'DockerId', variable: 'Dockerpwd')]) {
 
-sh "docker login -u 7057205728 -p ${DockerId}"
+sh "docker login -u 7057205728 -p ${Dockerpwd}"
 
 }
 
