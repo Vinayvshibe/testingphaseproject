@@ -48,7 +48,7 @@ echo "Hello Java Express"
 
 sh 'ls'
 
-sh 'docker build -t 7057205728/mydockerrepo:${BUILD_NUMBER} .'
+sh 'docker build -t 7057205728/mydockerrepo .'
 
 }
 
