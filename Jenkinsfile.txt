@@ -62,7 +62,7 @@ steps {
 
 withCredentials([string(credentialsId: 'DockerId', variable: 'Dockerpwd')]) {
 
-sh "docker login -u bhaveshraval -p ${Dockerpwd}"
+sh "docker login -u 7057205728 -p ${DockerId}"
 
 }
 
@@ -86,7 +86,7 @@ steps {
 
 
 
-sh 'docker run -itd -p 8084:8080 bhaveshraval/docker_jenkins_springboot:${BUILD_NUMBER}'
+sh 'docker run -itd -p 8084:8080 mydockerrepo/docker_jenkins_springboot:${BUILD_NUMBER}'
 
 }
 
