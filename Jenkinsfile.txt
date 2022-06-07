@@ -50,7 +50,7 @@ stage('Docker Login'){
 steps {
  script {
  withCredentials([string(credentialsId: 'dockerhubpwd', variable: 'dockerhubpwd')]) {
-   sh 'docker login -u 7057205728 -p ${dockerhubpwd}
+   sh 'docker login -u 7057205728 -p ${dockerhubpwd}'
    
    sh 'docker push 7057205728/mydockerrepo'
 }
