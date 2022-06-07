@@ -10,4 +10,4 @@ EXPOSE 8080
 
 
 
-ENTRYPOINT ["java","-jar"," Testing_phase-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-jar","/target/Testing_phase-0.0.1-SNAPSHOT.jar"]
