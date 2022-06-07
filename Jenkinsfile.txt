@@ -47,52 +47,17 @@ stage('Build Docker Image') {
         }
 
 stage('Docker Login'){
-
-
-
 steps {
-
-withCredentials([string(credentialsId: 'DockerId', variable: 'Dockerpwd')]) {
-
-sh "docker login -u 7057205728 -p ${Dockerpwd}"
-
+ script {
+ withCredentials([string(credentialsId: 'dockerhubpwd', variable: 'dockerhubpwd')]) {
+   sh 'docker login -u 7057205728 -p ${dockerhubpwd}
+   
+   sh 'docker push 7057205728/mydockerrepo'
+}
 }
 
-} 
-
-}
-
-stage('Docker Push'){
-
-steps {
-
-sh 'docker push 7057205728/mydockerrepo:${BUILD_NUMBER}'
-
-}
-
-}
-
-stage('Docker deploy'){
-
-steps {
 
 
-
-sh 'docker run -itd -p 8084:8080 7057205728/mydockerrepo:${BUILD_NUMBER}'
-
-}
-
-}
-
-stage('Archving') { 
-
-steps {
-
-archiveArtifacts '**/target/*.jar'
-
-}
-
-}
 
 }
 
