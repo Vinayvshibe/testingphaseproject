@@ -55,7 +55,7 @@ steps {
    sh 'docker push 7057205728/mydockerrepo'
 }
 }
-
+}}
 
 
 
